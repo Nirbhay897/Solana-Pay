@@ -17,12 +17,7 @@ input::-webkit-inner-spin-button {
     background-color: transparent !important;
 }
 
-.phantom-button:hover > .wallet-adapter-button-start-icon > svg,
-.phantom-button:hover > span {
+/* .phantom-button:hover > .wallet-adapter-button-start-icon > svg,
+/* .phantom-button:hover > span {
     color: rgb(243 244 246) !important;
-}
-
-.body{
-    background-color: 'black' !important;
-    color: 'white'!important;
-}
+} */ 

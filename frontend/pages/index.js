@@ -20,8 +20,8 @@ const Home = () => {
     const { avatar, userAddress, doTransaction, transactions, setNewTransactionModalOpen, newTransactionModalOpen } = useCashApp()
 
     return (
-        <div className="flex min-h-screen ">
-            <header className="flex w-[250px] flex-col bg-[#0bb534] p-12">
+        <div className="flex min-h-screen bg-black">
+            <header className="flex w-[250px] flex-col bg-gray-800 p-12">
                 <Profile setModalOpen={setTransactionQRModalOpen} avatar={avatar} userAddress={userAddress} setQrCode={setQrCode} />
                 <TransactionQRModal modalOpen={transactionQRModalOpen} setModalOpen={setTransactionQRModalOpen} userAddress={userAddress} setQrCode={setQrCode} myKey={publicKey} />
 
@@ -31,10 +31,9 @@ const Home = () => {
                 <NewTransactionModal modalOpen={newTransactionModalOpen} setModalOpen={setNewTransactionModalOpen} addTransaction={doTransaction} />
             </header>
 
-            <main className="flex flex-1 flex-col">
-                <SearchBar />
-
-                <TransactionsList connected={connected} transactions={transactions} />
+            <main className="flex flex-1 bg-black flex-col">
+                {/* <SearchBar /> */}
+                <TransactionsList className='bg-black' connected={connected} transactions={transactions} />
             </main>
         </div>
     )

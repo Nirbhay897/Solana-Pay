@@ -25,7 +25,7 @@ const NewTransactionModal = ({ modalOpen, setModalOpen, addTransaction }) => {
     }
 
     return (
-        <Modal modalOpen={modalOpen} setModalOpen={setModalOpen}>
+        <Modal className='bg-black' modalOpen={modalOpen} setModalOpen={setModalOpen}>
             <div className="relative flex flex-col items-center justify-center space-y-8">
                 <div className="flex items-center justify-center text-center text-7xl font-semibold text-[#00d54f]">
                     <input className="w-12 outline-none" id="amount" name="amount" type="number" value={amount} onChange={onAmountInput} min={0} />
