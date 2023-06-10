@@ -1,7 +1,8 @@
 import { truncate } from "../../utils/string"
-const Profile = ({ setModalOpen, avatar, userAddress }) => {
+const Profile = ({ setModalOpen, avatar, userAddress, setQrCode }) => {
     const onProfileOpen = () => {
         setModalOpen(true)
+        setQrCode(false)
     }
     return (
         <div onClick={onProfileOpen} className="flex cursor-pointer flex-col items-center space-y-3">
