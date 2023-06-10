@@ -7,7 +7,7 @@ import NewTransactionModal from '../components/transaction/NewTransactionModal'
 import TransactionsList from '../components/transaction/TransactionsList'
 import { useWallet } from '@solana/wallet-adapter-react'
 import TransactionQRModal from '../components/transaction/TransactionQRModal'
-import { useCashApp } from '../hooks/cashapp'
+import { useCashApp } from '../hooks/Cashapp'
 
 
 

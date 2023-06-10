@@ -5,7 +5,7 @@ import BigNumber from 'bignumber.js';
 import { useConnection } from '@solana/wallet-adapter-react';
 import { useEffect, useRef, useState } from 'react';
 import { truncate } from "../../utils/string"
-import { useCashApp } from '../../hooks/cashapp'
+import { useCashApp } from '../../hooks/Cashapp'
 import { getAvatarUrl } from "../../functions/getAvatarUrl"
 
 
