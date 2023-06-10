@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps }) {
         <>
             <Head>
                 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-                <title>Solana Transaction</title>
+                <title>Sol Pay</title>
             </Head>
             <WalletConnectionProvider>
                 <Component {...pageProps} />
