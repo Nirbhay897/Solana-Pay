@@ -12,7 +12,7 @@
     "@headlessui/react": "^1.7.0",
     "@solana/pay": "^0.2.4",
     "@solana/wallet-adapter-react": "^0.15.18",
-    "@solana/wallet-adapter-react-ui": "^0.9.16",
+    "@solana/wallet-adapter-react-ui": "^0.9.31",
     "@solana/wallet-adapter-wallets": "^0.18.9",
     "date-fns": "^2.29.2",
     "md5": "^2.3.0",
