@@ -2,9 +2,11 @@ import { ClockIcon, CurrencyDollarIcon, UserCircleIcon, Cog6ToothIcon } from '@h
 import { classNames } from '../../utils/classNames'
 import { WalletMultiButton } from '@solana/wallet-adapter-react-ui'
 import { truncate } from '../../utils/string'
+import { useEffect, useState } from 'react'
 require('@solana/wallet-adapter-react-ui/styles.css')
 
 const NavMenu = ({ connected, publicKey }) => {
+    const [loading, setLoading] = useState(false)
     const menus = [
         {
             icon: ClockIcon,
@@ -23,16 +25,27 @@ const NavMenu = ({ connected, publicKey }) => {
         },
     ]
 
+    // useEffect(()=>{
+    //     if(!connected){
+    //         location.reload()
+    //     }
+    //     setLoading(false)
+    // },[])
+
+
+
     return (
         <nav className="flex flex-1 items-center justify-center">
             <ul className="flex flex-col space-y-10">
                 {menus.map(({ icon, item, current, action }, i) => (
                     <NavMenuItem key={i} Icon={icon} item={item} current={current} action={action} />
                 ))}
-                <li>
-                    <WalletMultiButton className="phantom-button hover:scale-105 active:scale-95" startIcon={<UserCircleIcon style={{ height: 24, width: 24, color: '#15ec3c' }} />}>
+                <li onClick={()=>{}}>
+                    <div onClick={() =>{setLoading(true)}}>
+                    <WalletMultiButton  className="phantom-button hover:scale-105 active:scale-95" startIcon={<UserCircleIcon style={{ height: 24, width: 24, color: '#15ec3c' }} />}>
                         <span className="text-sm font-semibold text-[#15ec3c]">{connected ? truncate(publicKey.toString()) : 'Connect Wallet'}</span>
                     </WalletMultiButton>
+                    </div>
                 </li>
             </ul>
         </nav>

@@ -15,6 +15,17 @@ const Home = () => {
     const { connected, publicKey } = useWallet()
     const [transactionQRModalOpen, setTransactionQRModalOpen] = useState(false)
     const [qrCode, setQrCode] = useState(false)
+    const [loading, setLoading] = useState(false)
+
+    useEffect(()=>{
+        if(userAddress === '11111111111111111111111111111111'){
+            setLoading(true)
+        }
+        if(loading){
+            location.reload()
+        }
+        setLoading(false)
+    },[loading])
 
 
     const { avatar, userAddress, doTransaction, transactions, setNewTransactionModalOpen, newTransactionModalOpen } = useCashApp()

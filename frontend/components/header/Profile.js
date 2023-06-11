@@ -1,9 +1,13 @@
+import { useEffect, useState } from "react"
 import { truncate } from "../../utils/string"
 const Profile = ({ setModalOpen, avatar, userAddress, setQrCode }) => {
+
     const onProfileOpen = () => {
         setModalOpen(true)
         setQrCode(false)
     }
+
+
     return (
         <div onClick={onProfileOpen} className="flex cursor-pointer flex-col items-center space-y-3">
             <div className="h-16 w-16 rounded-full border-2 border-[#15ec3c]">

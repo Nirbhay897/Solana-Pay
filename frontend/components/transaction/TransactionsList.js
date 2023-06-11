@@ -24,14 +24,14 @@ const TransactionsList = ({ connected, transactions }) => {
                             <TransactionItem key={id} id={id} to={to} description={description} transactionDate={transactionDate} amount={amount} toggleTransactionDetailModal={toggleTransactionDetailModal} />
                         )) : (
                             <div className="flex flex-row items-center text-center justify-center mt-40">
-                        <p className="text-xl font-normal text-[#15ec3c]">No Transaction yet!</p>
+                        <p className="text-xl font-normal text-gray-400 mr-14">No Transaction yet!</p>
                     </div>
                         )}
 
                         <TransactionDetailModal modalOpen={modalOpen} setModalOpen={setModalOpen} currentTransaction={currentTransaction} />
                     </>
                 ) : (
-                    <div className="flex items-center justify-center pt-20">
+                    <div className="flex items-center justify-center mt-40">
                         <p className="text-2xl font-medium text-[#15ec3c]">Please connect your wallet.</p>
                     </div>
                 )}
